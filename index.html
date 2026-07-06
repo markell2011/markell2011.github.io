@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday 💖</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: linear-gradient(pink, white);
+    }
+
+    h1 {
+      margin-top: 80px;
+      color: #d63384;
+    }
+
+    button {
+      padding: 15px 25px;
+      font-size: 18px;
+      background: #ff4d6d;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background: #e6004c;
+    }
+
+    #confetti {
+      display: none;
+      font-size: 30px;
+      margin-top: 20px;
+    }
+
+    #gift {
+      display: none;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+
+      margin-top: 40px;
+      padding: 20px;
+      background: white;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    #gift.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>🎉 Happy Birthday 🎉</h1>
+
+  <p>🎂🎈🎁</p>
+
+  <button onclick="openGift()">Open My Gift 🎁</button>
+
+  <div id="confetti">🎊🎉🎊🎉🎊</div>
+
+  <div id="gift">
+    <h2>💖 Your Birthday Letter 💖</h2>
+    <p>
+      Happy Birthday 🥹❤️<br><br>
+      I hope your day is filled with love, happiness, and everything you deserve 💕<br><br>
+      You are really special to me 💖🎂
+    </p>
+  </div>
+
+  <script>
+    function openGift() {
+      document.getElementById("confetti").style.display = "block";
+
+      const gift = document.getElementById("gift");
+      gift.style.display = "block";
+
+      setTimeout(() => {
+        gift.classList.add("show");
+      }, 100);
+    }
+  </script>
+
+</body>
+</html>
